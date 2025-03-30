@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Store - Browse Products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- DYNAMICALLY ADDED NAVBAR -->
+    <!-- DYNAMICALLY ADDED PRODUCT LIST -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-between">
+                    <h5 class="modal-title">Member zone</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Log In Section -->
+                    <p class="fs-4 font-weight-bold">Log In</p>
+                    <form id="loginForm" onsubmit="userLogIn(event)">
+                        <div class="form-group">
+                            <input type="email" class="form-control mb-2 loginEmail" placeholder="Email" required>
+                            <input type="password" class="form-control mb-2 loginPassword" placeholder="Password"
+                                required>
+                        </div>
+                        <div id="rememberPw" class="mt-4 mb-4" style="display: flex; justify-content: space-between;">
+                            <div class="io">
+                                <input type="checkbox" class="align-self-center">
+                                <span class="ml-2">Remember password?</span>
+                            </div>
+                            <button type="submit" class="btn btn-outline-success align-self-start d-flex">Log
+                                In</button>
+
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <!-- Register Section -->
+                    <p class="fs-4 font-weight-bold">Register Account</p>
+                    <form id="registerAccount">
+                        <div class="form-group mb-4">
+                            <div id="accountCreatedAlert">
+                            </div>
+                            <input type="email" class="form-control mb-2 email" placeholder="Email" required>
+                            <input type="text" class="form-control mb-2 username" placeholder="Username" required>
+                            <input type="password" class="form-control mb-2 password" placeholder="Password" required>
+                            <input type="password" class="form-control mb-2 passwordRepeat"
+                                placeholder="Repeat password" required>
+                            <p class="pwChecker p-3 mb-2 bg-danger bg-gradient text-white m-0 rounded"
+                                style="display:none;">Passwords
+                                must match!</p>
+                        </div>
+                        <button class="btn btn-outline-success align-self-end d-flex">Create account</button>
+                    </form>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+
+    <div class="container p-0 mt-4">
+        <div class="">
+            <p class="fs-4">Device filter</p>
+            <div class="row mb-3">
+                <form id="filterProducts">
+                    <div class="input-group gap-2">
+
+                        <select class="form-select p-2 rounded-0 p-2 fs-5" id="dev_make" name="make">
+
+                        </select>
+                        <select class="form-select p-2 p-2 fs-5" id="dev_model" name="model">
+
+                        </select>
+                        <button class="btn btn-outline-dark rounded-0 resetFilter">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <span class="my-5 filterCounter"></span>
+        <hr class="mt-3">
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mt-4 productWrapper"
+            id="productWrapper">
+        </div>
+        <div class="pagination mt-3 d-flex justify-content-center gap-2">
+            <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
+            <div id="pageNumbers" class="d-flex gap-1"></div>
+            <button id="nextBtn" class="btn btn-outline-primary">Next</button>
+        </div>
+
+    </div>
+
+
+
+    <script src="./scripts/components/navbar.js"></script>
+    <script src="./scripts/components/products.js"></script>
+    <script src="./scripts/components/alert.js"></script>
+    <!-- <script src="./scripts/components/footer.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <!-- <script src="./scripts/getAllProducts.js"></script> -->
+    <script src="./scripts/shoppingCart copy.js"></script>
+    <script src="./scripts/browser.js"></script>
+    <script>
+        $('.dropdown-menu').click(function (e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
