@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 header('Content-Type: application/json');
 
 require '../vendor/autoload.php';
-\Stripe\Stripe::setApiKey('sk_test_51Qs3NMPvDvk9jk0fOgyLpjXppqWGh8yrzpdiucRttPIuQUtOEJShFWIblqoZVdMWz8SErCjO41HDy7ESkVFTqm6z00NF8d9ePU');
+\Stripe\Stripe::setApiKey('HIDDEN');
 
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);

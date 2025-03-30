@@ -1,5 +1,5 @@
 const stripe = Stripe(
-  "pk_test_51Qs3NMPvDvk9jk0fcgoQelCxDImRCoaO94NLScpn03TknvOARQ9vT8ge3PbNtJNStLTMiQUAZ6F1LorWsCju0FXI00MNmm8oEP"
+  "HIDDEN"
 );
 
 let elements;
