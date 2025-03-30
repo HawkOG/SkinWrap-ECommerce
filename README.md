@@ -1,7 +1,7 @@
 ## Online Store project for phone wrap skins
 I used dbrand images (only for demonstration purposes, pls don't sue me)
 
-A small eCommerce project written in JS and PHP. Fully working authentication, adding and retrieving products, cart management, and finalizing purchases using Stripe payment platform
+A small eCommerce project written in JS and PHP. Working authentication, adding and retrieving products, cart management, and finalizing purchases using Stripe payment platform
 
 StripeJS API keys were not uploaded.
 
